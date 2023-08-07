@@ -24,7 +24,7 @@ function removeActiveClasses() {
 //Page3 Size bigram sentiment 
 // I Saw It First
 
-/*
+
 
 if(document.getElementById("wordSentiment")){
 
