@@ -1,0 +1,178 @@
+
+
+import * as echarts from 'echarts';
+
+var chartDom = document.getElementById('container');
+    var myChart = echarts.init(dom, null, {
+      renderer: 'canvas',
+      useDirtyRect: false
+    });
+    var app = {};
+    
+var option;
+
+const symbols = [
+    'image://'+'images/body1.png',
+    'image://'+'images/body1.png',
+    'image://'+'images/body1.png',
+    'image://'+'images/body1.png',
+    'image://'+'images/body1.png',
+    'image://'+'images/clothe1.png',
+    'image://'+'images/clothe1.png',
+    'image://'+'images/clothe1.png',
+    'image://'+'images/clothe1.png',
+    'image://'+'images/clothe1.png'
+  ];
+const bodyMax = 150;
+const labelSetting = {
+  show: true,
+  position: 'top',
+  offset: [0, -20],
+  formatter: function (param) {
+    return ((param.value / bodyMax) * 100).toFixed(0) + '%';
+  },
+  fontSize: 18,
+  fontFamily: 'Arial'
+};
+const markLineSetting = {
+  symbol: 'none',
+  lineStyle: {
+    opacity: 0.3
+  },
+  data: [
+    {
+      type: 'max',
+      label: {
+        formatter: 'max: {c}'
+      }
+    },
+    {
+      type: 'min',
+      label: {
+        formatter: 'min: {c}'
+      }
+    }
+  ]
+};
+option = {
+  tooltip: {},
+  legend: {
+    data: ['typeA', 'typeB'],
+    selectedMode: 'single'
+  },
+  xAxis: {
+    data: ['a', 'b', 'c', 'd', 'e'],
+    axisTick: { show: false },
+    axisLine: { show: false },
+    axisLabel: { show: false }
+  },
+  yAxis: {
+    max: bodyMax,
+    offset: 20,
+    splitLine: { show: false }
+  },
+  grid: {
+    top: 'center',
+    height: 230
+  },
+  markLine: {
+    z: -100
+  },
+  series: [
+    {
+      name: 'typeA',
+      type: 'pictorialBar',
+      symbolClip: true,
+      symbolBoundingData: bodyMax,
+      label: labelSetting,
+      data: [
+        {
+          value: 123,
+          symbol: symbols[5]
+        },
+        {
+          value: 34,
+          symbol: symbols[6]
+        },
+        {
+          value: 101,
+          symbol: symbols[7]
+        },
+        {
+          value: 89,
+          symbol: symbols[8]
+        },
+        {
+          value: 72,
+          symbol: symbols[9]
+        }
+      ],
+      markLine: markLineSetting,
+      z: 10
+    },
+    {
+      name: 'typeB',
+      type: 'pictorialBar',
+      symbolClip: true,
+      symbolBoundingData: bodyMax,
+      label: labelSetting,
+      data: [
+        {
+          value: 12,
+          symbol: symbols[0]
+        },
+        {
+          value: 44,
+          symbol: symbols[1]
+        },
+        {
+          value: 131,
+          symbol: symbols[2]
+        },
+        {
+          value: 33,
+          symbol: symbols[3]
+        },
+        {
+          value: 142,
+          symbol: symbols[4]
+        }
+      ],
+      markLine: markLineSetting,
+      z: 10
+    },
+    {
+      name: 'full',
+      type: 'pictorialBar',
+      symbolBoundingData: bodyMax,
+      animationDuration: 0,
+      itemStyle: {
+        color: '#ccc'
+      },
+      data: [
+        {
+          value: 1,
+          symbol: symbols[0]
+        },
+        {
+          value: 1,
+          symbol: symbols[1]
+        },
+        {
+          value: 1,
+          symbol: symbols[2]
+        },
+        {
+          value: 1,
+          symbol: symbols[3]
+        },
+        {
+          value: 1,
+          symbol: symbols[4]
+        }
+      ]
+    }
+  ]
+};
+
+option && myChart.setOption(option);
