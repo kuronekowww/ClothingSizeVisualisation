@@ -1,15 +1,8 @@
-const brands = document.querySelectorAll('.brand')
+const bodies = document.querySelectorAll('.bodyImg')
 
 
-brands.forEach(brand => {
-    brand.addEventListener('click', () => {
-        removeActiveClasses()
-        brand.classList.add('active')
+bodies.forEach(body => {
+    body.addEventListener('click', () => {
+        body.classList.add('active')
     })
 })
-
-function removeActiveClasses() {
-    brands.forEach(brand => {
-        brand.classList.remove('active')
-    })
-}

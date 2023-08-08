@@ -6,69 +6,164 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <script src="script.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/fullpage.js/dist/fullpage.min.js"></script>
   <script src="https://fastly.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
   <div id="fullpage">
-    <div class="section" id="webSection">
-      <h1>Frequently Asked Questions</h1>
-      <div class="brand-container">
-        <div class="brand">
-          <h3 class="brand-title">
-            Pretty Little Thing
-          </h3>
+    <div class="section" id="vanityChart" style="height: 100vh;">
+      <h1> Vanity Size: Size 12 waist varies between brands </h1>
+      <div id="vanity-container" style="width: 100%; height: 400px;">
+      </div>
+    </div>
+    <div class="section" id="dataSource">
+      <h1 style="padding-left: 40px;">Data Source</h1>
+      <div class="introduction-container">
+        <div class="brand" style="width: 300px;
+        height: 130px;
+        flex-shrink: 0;">
+          <img src="/images/plt_brand.jpeg" alt="">
+        </div>
+        <div class="introduction">
+          <div class="brand-title">
+            <p>16520 REVIEWS</p>
+          </div>
   
           <p class="brand-text" >
-            They make up everything
-          </p>
-        </div>
-  
-        <div class="brand">
-          <h3 class="brand-title">
-            I Saw It First
-          </h3>
-          <p class="brand-text">
-            Nobody knows.
-          </p>
-        </div>
-        
-        <div class="brand">
-          <h3 class="brand-title">
-            Brandy Melville
-          </h3>
-          <p class="brand-text">
-            Inheritance.
+            A UK-based fast-fashion retailer, aimed at 16–41-year-old women.
           </p>
         </div>
       </div>
+      <div class="introduction-container">
+        <div class="brand" style="width: 300px;
+        height: 130px;
+        flex-shrink: 0;">
+          <img src="/images/isf_brand.jpeg" alt="">
+        </div>
+        <div class="introduction">
+          <div class="brand-title">
+            <p>23420 REVIEWS</p>
+          </div>
+  
+          <p class="brand-text" >
+            A one-stop-shop for the stylish generation of authentic, fashion-lovers who deserve to see it first and wear it first. 
+          </p>
+        </div>
+      </div>
+      <div class="introduction-container">
+          <div class="brand" style="width: 300px;
+          height: 130px;
+          flex-shrink: 0;">
+            <img src="/images/bm_brand.png" alt="">
+          </div>
+          <div class="introduction">
+            <div class="brand-title">
+              <p>360 REVIEWS</p>
+            </div>
+    
+            <p class="brand-text" >
+              An Italian clothing and fashion accessories brand that markets their products to young women. It features only one size clothes.
+            </p>
+          </div>
+        </div>
     </div>
+
     <div class="section" id="wordSentiment" style="height: 100vh;">
       <div class="columnside" style="float: left; width:40%">
-        <h1>asdcscsc</h1>
+        <h3 style="margin-left: 40px;">What do female customers say about size?🤔<br/>
+          How do they feel?</h3>
       </div>
       <div class="columnmiddle" style="float: left; width:60%">
         <div id="chartISF" style="width: 90%; height: 360px;"></div>
         <div id="chartPLT" style="width: 90%; height: 360px;"></div>
       </div>
     </div>
-    <div class="section" id="wordCount" style="height: 100vh;">
-      <div id="bmChart" style="width: 100%; height: 400px;"></div>
-    </div>
+
     <div class="section" id="sizeCompare" style="height: 100vh;">
+      <h1>Compare size charts</h1>
       <div id="sizeLineChart" style="width: 100%; height: 400px;"></div>
       </div>
     <div class="section" id="whoFit">
         <div class="containerSplit">
             <div class="split left">
-            <h1>ONE SIZE FITS ALL</h1>
+            <h4 style="margin-top: 240px;">ONE SIZE FITS ALL</h4>
             </div>
             <div class="split right">
-            <h1>ONE SIZE FITS SMALL</h1>
+            <h4 style="margin-top: 240px;">ONE SIZE FITS SMALL</h4>
             </div>
           </div>
     </div>
+    <div class="section" id="wordCount" style="height: 100vh;">
+      <h1>What do customers say about?</h1>
+      <div id="bmChart" style="width: 100%; height: 400px;"></div>
+    </div>
 
+    <div class="section" id="bodyFit">
+      <h1 style="margin-left: 30px;">Guess: Can they fit in Brandy Melville one-size top?</h1>
+      <p style="color: #000;font-family: Inter;font-size: 20px;font-style: normal;font-weight: 500;line-height: 0%;text-transform: uppercase; margin: 0px 0px 0px 40px;">
+      click to see the answer
+      </p>
+      <div class="body-container">
+        <div class="bodyImg">
+          <h2 class="body-title">
+            Venus de Milo
+          </h2>
+        <div class="sizeImage">
+          <img src="/images/Venus.png" alt="" style="object-fit: cover;">
+          </div>
+          <p class="text-title">
+            Can not fit in
+          </p>
+            <p class="size-text" >
+              bust: 93cm  waist: 66cm
+            </p>
+        </div>
+  
+        <div class="bodyImg">
+          <h2 class="body-title">
+            Barbie
+          </h2>
+          <div class="sizeImage">
+            <img src="/images/Barbie.png" alt="" style="object-fit: cover;">
+            </div>
+          <p class="text-title">
+            Can fit in
+          </p>
+          <p class="size-text" >
+            bust: 81cm  waist: 41cm
+          </p>
+        </div>
+        
+        <div class="bodyImg">
+          <h2 class="body-title">
+            UK's Average Body
+          </h2>
+          <div class="sizeImage">
+            <img src="/images/Average.png" alt="" style="object-fit: cover;">
+            </div>
+          <p class="text-title">
+            Can not fit in
+          </p>
+          <p class="size-text" >
+            bust: 98cm  waist: 86cm
+          </p>
+        </div>
+        <div class="bodyImg">
+          <h2 class="body-title">
+            Size 10 Dress Form
+          </h2>
+          <div class="sizeImage">
+            <img src="/images/Form.png" alt="" style="object-fit: cover;">
+            </div>
+          <p class="text-title">
+            Can not fit in
+          </p>
+          <p class="size-text" >
+            bust: 97cm  waist: 71cm
+          </p>
+        </div>
+      </div>
+    </div>
     
   </div>
-  <script src="script.js"></script>
 </body>
 </html>

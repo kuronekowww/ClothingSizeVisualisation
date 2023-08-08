@@ -1,8 +1,4 @@
 :root {
-    --left-bg-color: rgba(87, 84, 236, 0.7);
-    --right-bg-color: rgba(43, 43, 43, 0.8);
-    --left-btn-hover-color: rgba(87, 84, 236, 1);
-    --right-btn-hover-color: rgba(28, 122, 28, 1);
     --hover-width: 75%;
     --other-width: 25%;
     --speed: 1000ms;
@@ -21,50 +17,6 @@ body, html {
     width: 100%;
     transition: all 0.5s ease;
   }
-
-
-h1 {
-  margin: 50px 0 30px;
-  text-align: center;
-}
-
-.brand-container {
-  max-width: 600px;
-  max-height: 100vh;
-  margin: 0 auto;
-}
-
-.brand {
-  background-color: transparent;
-  border: 1px solid #9fa4a8;
-  border-radius: 10px;
-  margin: 20px 0;
-  padding: 30px;
-  position: relative;
-  overflow: hidden;
-  transition: 0.3s ease;
-  cursor: pointer;
-}
-
-.brand.active {
-  background-color: #fff;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.1);
-}
-
-
-
-.brand-title {
-  margin: 0 35px 0 0;
-}
-
-.brand-text {
-  display: none;
-  margin: 30px 0 0;
-}
-
-.brand.active .brand-text {
-  display: block;
-}
 
 
   .containerSplit {
@@ -87,6 +39,7 @@ h1 {
     top: 0;
     background-repeat: no-repeat;
     background-size: cover;
+    background-image: url(images/onesize1.png);
   }
   
   .split.left::before {
@@ -102,6 +55,7 @@ h1 {
     top:0;
     background-repeat: no-repeat;
     background-size: cover;
+    background-image: url(images/onesize2.png);
   }
   
   .split.right::before {
@@ -134,4 +88,172 @@ h1 {
   .hover-right .left {
     width: var(--other-width);
   }
+
+  h1{
+    color: #000;
+    font-family: Inter;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 40px; /* 96.667% */
+    letter-spacing: -3.6px;
+  }
+
+  h2 {
+
+    text-align: center;
+    color: #000;
+    font-family: Inter;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+  }
+  
+  h3{
+    color: #000;
+  font-family: Inter;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 58px; /* 96.667% */
+  letter-spacing: -3.6px;
+  }
+
+  h4{
+    color: #ffffff;
+  font-family: Inter;
+  font-size: 90px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 80px; /* 96.667% */
+  letter-spacing: -3.6px;
+  position: absolute;
+  }
+  
+  .body-container {
+    margin: 5px;
+  }
+  
+  .bodyImg {
+    background-color: white;
+    border: 1px solid #9fa4a8;
+    border-radius: 10px;
+    margin:  50px 15px 0px;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+    transition: 0.3s ease;
+    cursor: pointer;
+    float: left;
+    width: 280px;
+    height: 572px;
+    flex-shrink: 0;
+  }
+  
+  .bodyImg.active {
+    background-color: #fff;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .sizeImage{
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    width: 260px;
+    height: 347px;
+    object-fit: contain;
+  }
+  
+  .sizeImage img{
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    margin: auto;
+  }
+  
+  .text-title {
+    margin: 0 20px 0 0;
+  }
+  
+  .size-text {
+    display: none;
+    margin: 0px 10px 0px 45px;
+    align-items: center;
+  
+  }
+  
+  .text-title{
+    display: none;
+    color: #000;
+    font-family: Inter;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height:30px;
+    margin: 40px 20px 5px 40px;
+  }
+  
+  .bodyImg.active .size-text {
+    display: block;
+  }
+  
+  .bodyImg.active .text-title {
+    display: block;
+  }
+
+  .introduction-container{
+    width: 30%;
+    height: 600px;
+    float: left;
+    margin: 50px 20px 10px 25px;
+    background-color: #ffffff;
+
+  }
+
+  .brand{
+    position: relative;
+    margin: 10px auto;
+  }
+
+  .brand-title{
+    width: 200px;
+  }
+  .brand-title p{
+    color: #000;
+  font-family: Inter;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 48px;
+  letter-spacing: -2.4px;
+  }
+
+ 
+  .brand img{
+    max-width: 100%;
+  }
+
+  .introduction{
+    width: 396px;
+    height: 390px;
+    flex-shrink: 0;
+    margin: 0 auto;
+  }
+
+  .brand-text{
+    width: 370px;
+    height: 200px;
+    color: #000;
+    font-family: Inter;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px; /* 100% */
+    margin: 0 auto;
+    padding: 10px;
+    background-color: #d9dee2;
+    border-radius: 5px;
+  }
+
 

@@ -2,24 +2,6 @@
 
 document.addEventListener("DOMContentLoaded", function() {
 
-//Page2 Data Introduction
-if (document.getElementById("webSection")){
-const brands = document.querySelectorAll('.brand')
-
-
-brands.forEach(brand => {
-    brand.addEventListener('click', () => {
-        removeActiveClasses()
-        brand.classList.add('active')
-    })
-})
-
-function removeActiveClasses() {
-    brands.forEach(brand => {
-        brand.classList.remove('active')
-    })
-}
-}
 
 //Page3 Size bigram sentiment 
 // I Saw It First
@@ -217,10 +199,10 @@ if(document.getElementById("wordSentiment")){
     option && pltChart.setOption(option);
   }
 
-  /*
+
 //Page BM Key Word
   if (document.getElementById("wordCount")) {
-  var chartDom = document.getElementById("chartBM");
+  var chartDom = document.getElementById("bmChart");
   var bmChart = echarts.init(chartDom);
   var option;
   
@@ -398,7 +380,7 @@ option = {
 compareChart.setOption(option);
 }
 
-*/
+
 
 //Page5? who can fit in
 
@@ -414,6 +396,81 @@ if (document.getElementById("whoFit")){
   right.addEventListener('mouseleave', () => container.classList.remove('hover-right'));
   }
 
+
+  //Page 4 vanity size
+
+if (document.getElementById("vanityChart")){
+  var chartDom = document.getElementById('vanity-container');
+  var vanityChart = echarts.init(chartDom);
+  var option;
+
+  option = {
+  tooltip: {
+    trigger: 'axis',
+    axisPointer: {
+      type: 'shadow'
+    }
+  },
+  grid: {
+    left: '3%',
+    right: '4%',
+    bottom: '3%',
+    containLabel: true
+  },
+  xAxis: [
+    {
+      type: 'category',
+      data: [
+        'COS',
+        'NEW LOOK',
+        'I SAW IT FIRST',
+        'PRETTY LITTLE THING',
+        'ZARA',
+        'ASOS',
+        'M&S',
+        'NEXT',
+        'H&M'
+      ],
+      axisTick: {
+        alignWithLabel: true
+      },
+      axisLabel: {
+        show: true,
+        hideOverlap: false,
+        interval: 0
+      }
+    }
+  ],
+  yAxis: [
+    {
+      type: 'value',
+      min: 70
+    }
+  ],
+  series: [
+    {
+      name: 'waist (cm)',
+      type: 'bar',
+      barWidth: '50%',
+      data: [72,73,77,78,76,75,75,74,74]
+    }
+  ]
+  };
+
+  vanityChart.setOption(option);
+}
+
+if(document.getElementById('bodyFit')){
+
+  const bodies = document.querySelectorAll('.bodyImg')
+
+
+bodies.forEach(body => {
+    body.addEventListener('click', () => {
+        body.classList.add('active')
+    })
+})
+}
 
 new fullpage('#fullpage', {
   //options here
