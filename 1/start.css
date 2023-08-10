@@ -1,102 +1,79 @@
-@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
 
 * {
   box-sizing: border-box;
 }
 
 body {
-
-  background-color: #f0f0f0;
-}
-
-h2 {
-
-  text-align: center;
-  color: #000;
-  font-family: Inter;
-  font-size: 30px;
-  font-style: normal;
-  font-weight: 600;
-}
-
-h1{
-  color: #000;
-  font-family: Inter;
-  font-size: 60px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 40px; /* 96.667% */
-  letter-spacing: -3.6px;
-}
-
-.body-container {
-  margin: 5px;
-}
-
-.bodyImg {
-  background-color: white;
-  border: 1px solid #9fa4a8;
-  border-radius: 10px;
-  margin:  50px 15px 0px;
-  padding: 20px;
-  position: relative;
-  overflow: hidden;
-  transition: 0.3s ease;
-  cursor: pointer;
-  float: left;
-  width: 320px;
-  height: 572px;
-  flex-shrink: 0;
-}
-
-.bodyImg.active {
-  background-color: #fff;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.1);
-}
-
-.sizeImage{
-  display: inline-flex;
+  background-color: #f4f4f4;
+  display: flex;
   flex-direction: column;
-  justify-content: flex-end;
   align-items: center;
-  width: 260px;
-  height: 347px;
-  object-fit: contain;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  padding: 10px;
 }
 
-.sizeImage img{
-  max-width: 100%;
-  max-height: 100%;
-  display: block;
-  margin: auto;
+.testimonial-container {
+  background-color: #476ce4;
+  color: #fff;
+  border-radius: 15px;
+  margin: 20px auto;
+  padding: 50px 80px;
+  max-width: 768px;
+  position: relative;
 }
 
-.text-title {
-  margin: 0 20px 0 0;
+.fa-quote {
+  color: rgba(255, 255, 255, 0.506);
+  font-size: 28px;
+  position: absolute;
+  top: 70px;
 }
 
-.size-text {
-  display: none;
-  margin: 0px 10px 0px 45px;
-  align-items: center;
-
+.fa-quote-right {
+  right: 40px;
 }
 
-.text-title{
-  display: none;
-  color: #000;
+.fa-quote-left {
+  left: 40px;
+}
+
+.testimonial {
+  line-height: 28px;
+  text-align: justify;
+}
+
+.reviewtitle {
   font-family: Inter;
-  font-size: 32px;
+  font-size: 25px;
   font-style: normal;
   font-weight: 600;
-  line-height:30px;
-  margin: 40px 20px 5px 40px;
+  letter-spacing: 0px;
+  margin: 0px;
 }
 
-.bodyImg.active .size-text {
-  display: block;
+.progress-bar {
+  background-color: #fff;
+  height: 4px;
+  width: 100%;
+  animation: grow 10s linear infinite;
+  transform-origin: left;
 }
 
-.bodyImg.active .text-title {
-  display: block;
+@keyframes grow {
+  0% {
+    transform: scaleX(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .testimonial-container {
+    padding: 20px 30px;
+  }
+
+  .fa-quote {
+    display: none;
+  }
 }
