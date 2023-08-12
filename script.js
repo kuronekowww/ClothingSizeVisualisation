@@ -468,6 +468,7 @@ if (document.getElementById("vanityChart")){
       type: 'shadow'
     }
   },
+  legend: {},
   grid: {
     left: '3%',
     right: '4%',
@@ -501,15 +502,21 @@ if (document.getElementById("vanityChart")){
   yAxis: [
     {
       type: 'value',
-      min: 70
+      min: 60
     }
   ],
   series: [
     {
       name: 'waist (cm)',
       type: 'bar',
-      barWidth: '50%',
-      data: [72,73,77,78,76,75,75,74,74]
+      barWidth: '30%',
+      data: [64,66,68,68,70,65,65,67.5,68]
+    },
+    {
+      name: 'bust (cm)',
+      type: 'bar',
+      barWidth: '30%',
+      data: [80,85,86,86,84,84,82,84,84]
     }
   ]
   };
