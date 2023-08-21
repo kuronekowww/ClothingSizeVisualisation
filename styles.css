@@ -1,8 +1,4 @@
-:root {
-    --hover-width: 75%;
-    --other-width: 25%;
-    --speed: 1000ms;
-  }
+
 
 body, html {
     margin: 0;
@@ -18,76 +14,6 @@ body, html {
     transition: all 0.5s ease;
   }
 
-
-  .containerSplit {
-    display: flex;
-    height: 100vh;
-    width: 100%;
-    transition: all 0.5s ease;
-  }
-  
-
-  .split {
-    position: absolute;
-    width: 50%;
-    height: 100%;
-    overflow: hidden;
-  }
-  
-  .split.left {
-    left: 0;
-    top: 0;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-image: url(images/onesize1.png);
-  }
-  
-  .split.left::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: var(--left-bg-color);
-  }
-  
-  .split.right {
-    right: 0;
-    top:0;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-image: url(images/onesize2.png);
-  }
-  
-  .split.right::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: var(--right-bg-color);
-  }
-  
-  .split.right,
-  .split.left,
-  .split.right::before,
-  .split.left::before {
-    transition: all var(--speed) ease-in-out;
-  }
-  
-  .hover-left .left {
-    width: var(--hover-width);
-  }
-  
-  .hover-left .right {
-    width: var(--other-width);
-  }
-  
-  .hover-right .right {
-    width: var(--hover-width);
-  }
-  
-  .hover-right .left {
-    width: var(--other-width);
-  }
 
   h1{
     color: #000;
@@ -258,14 +184,10 @@ body, html {
 
 
 
-  * {
-    box-sizing: border-box;
-  }
-  
 
   
   .testimonial-container {
-    background-color: #476ce4;
+    background-color: #689BE8;
     color: #fff;
     border-radius: 15px;
     margin: 20px auto;
@@ -311,6 +233,146 @@ body, html {
     transform-origin: left;
   }
   
+
+.bmContainer {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  background:transparent;
+}
+
+.backsection{
+  position:absolute;
+  background-image: url(images/bmClothes.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+.split {
+  position: absolute;
+  width: 5%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.split.left {
+  left: 0;
+  background-image: url(images/bmHover.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1;
+}
+
+.split.left::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(48, 47, 47, 0.135);
+  z-index: 1;
+}
+
+
+.split.left,
+.split.left::before {
+  transition: all 1000ms ease-in-out;
+}
+
+.hover-left .left {
+  width: 100%;
+}
+
+
+.quizSection{
+  background-color: white;
+  width:90%;
+  max-width: 600px;
+  margin:100px auto 0;
+  border-radius: 20px;
+  padding:10px;
+}
+
+.quizSection h1{
+  border-bottom: 1px solid #333;
+}
+.h6{
+  font-weight: 250px;
+  color: black;
+  font-weight:600;
+  padding-bottom: 20px;
+}
+
+.quiz{
+  padding: 40px 0;
+}
+
+.answer{
+
+  color: rgb(0, 0, 0);
+  font-weight: 600;
+  font-size: 20px;
+  width: 100%;
+  padding:15px;
+  margin:10px;
+  text-align: left;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 100ms;
+}
+
+.answer:hover{
+  color: #ffffff;
+  background: #222;
+}
+
+
+#nextButton{
+  background:#d9d9d9;
+  color:#000000;
+  font-weight: 500;
+  width:200;
+  padding: 10px;
+  margin:10px auto 0;
+  border-radius: 5px;
+  cursor: pointer;
+  display: block;
+}
+
+#info{
+  font-size: 15px;
+  max-width: 100%;
+  padding: 10px;
+  margin:10px auto 0;
+  display: block;
+}
+
+.correct{
+  background: #99D077;
+}
+
+.wrong{
+  background: #F3ACAC;
+}
+
+.subtitle{
+  color: #000000;
+  font-family: Helvetica;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 300;
+
+}
+
+.bigTitle{
+  color: #000;
+font-family: Inter;
+font-size: 128px;
+font-style: normal;
+font-weight: 700;
+}
+
   @keyframes grow {
     0% {
       transform: scaleX(0);
