@@ -124,11 +124,7 @@ function nextQuestion(){
   }
 }
 
-function showResult(){
-  resetQuestion();
-  questionElement.innerHTML = " ";
-  quizTitle.innerHTML = "Scroll down to discover more about clothing size";
-}
+
 }
 if (document.getElementById("bmReviews")){
   const testimonialsContainer = document.querySelector('.testimonials-container')
@@ -441,9 +437,6 @@ var compareChart = echarts.init(chartDom);
 var option;
 
 option = {
-  title: {
-    text: 'Size Compare'
-  },
   tooltip: {
     trigger: 'axis'
   },
